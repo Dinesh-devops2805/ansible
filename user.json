@@ -1,0 +1,16 @@
+{
+    "name": "lakshmi",
+    "email": "kimtaehyung143@gmail.com",
+    "addresses":
+    [
+        {
+            "type": "permanent",
+            "addressline": "hyderabad"
+        },
+        {
+            "type": "current",
+            "addressline": "bangalore"
+        }
+    ]
+}
+
