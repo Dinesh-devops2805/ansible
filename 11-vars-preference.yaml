@@ -2,8 +2,8 @@
   hosts: web 
   vars:
    COURSE: "DevOps with AWS from PLAY level"
-  vars_files:
-  - vars.yaml
+  # vars_files:
+  # - vars.yaml
   vars_prompt:
   - name: COURSE
     prompt: Enter the course name
@@ -19,3 +19,4 @@
 # 1. command line/args
 # 2. Task level
 # 3. Files
+# 4. prompt
