@@ -4,10 +4,11 @@
   tasks: 
   - name: install packages
     ansible.builtin.package:
-     name:  "{{ item }}"  # item is a keyword 
+     name:  "{{ item.name }}"  # item is a keyword 
+     state:  "{{ item.state }}"
     loop:
-    - mysql
-    - postfix
-    - nginx
-    - httpd 
+    - { name: 'mysql', state: 'present' }
+    - { name: 'postfix', state: 'absent' }
+    - { name: 'nginx', state: 'present' }
+    - { name: 'httpd', state: 'absent' }
     
