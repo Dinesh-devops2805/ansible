@@ -1,0 +1,13 @@
+- name: packages installing 
+  hosts: web
+  become: yes
+  tasks: 
+  - name: install packages
+    ansible.builtin.package:
+     name:  "{{ item }}"  # item is a keyword 
+    loop:
+    - mysql
+    - postfix
+    - nginx
+    - httpd 
+    
