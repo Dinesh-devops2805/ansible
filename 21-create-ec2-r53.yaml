@@ -21,3 +21,6 @@
     register: ec2_instances    # to catch the total information and output - registers
 
 
+  - name: print the output 
+    ansible.builtin.debug:
+      msg: "{{ ec2-instances }}"
