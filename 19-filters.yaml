@@ -17,3 +17,10 @@
       greetings: "Hello Maha Lakshmi"
     ansible.builtin.debug:
       msg: "{{ greetings | lower }}"
+
+  
+  - name: get the unique values 
+    vars:
+      numbers: [1,2,3,4,21,3,2,67]
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}"
