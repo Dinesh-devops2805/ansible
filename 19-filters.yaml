@@ -49,3 +49,10 @@
        - {"key": "leraner","value": "mahalakshmi"}
     ansible.builtin.debug:
       msg: "{{ course | items2dict }}"   # converting list to dictionary where itesm2dict is a function keyword
+
+
+  - name: check IP address
+    vars:
+      myip: "192.168.1.1"
+    ansible.builtin.debug:
+      msg: "{{ myip | ansible.utils.ipv4 }}"  # here we are checking the IP address is valid or not 
