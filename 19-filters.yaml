@@ -39,4 +39,13 @@
         duration: 120
         leraner: "mahalakshmi"
     ansible.builtin.debug:
-      msg: "{{ course | dict2items}}"     # converting dictionary to list -> dict2items is a function 
+      msg: "{{ course | dict2items}}"     # converting dictionary to list -> dict2items is a function keyword
+
+  - name: convert list to map
+    vars:
+      course:
+       - {"key": "name","value": "DevOps with AWS"}
+       - {"key": "duration","value": 120}
+       - {"key": "leraner","value": "mahalakshmi"}
+    ansible.builtin.debug:
+      msg: "{{ course | items2dict }}"   # converting list to dictionary where itesm2dict is a function keyword
